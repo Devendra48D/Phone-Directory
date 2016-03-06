@@ -29,8 +29,7 @@ public class myTests {
 		directory.addEntry("Jaya", "9841215686");
 		directory.deleteEntry("Harry");
 		System.out.println(directory.getNumber("Manish"));
-		
-		
+				
 		
 	}
 }

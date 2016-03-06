@@ -17,7 +17,10 @@ import java.util.Properties;
  */
 public class PhoneDirectory {
 	String num;
-	
+	/**
+	 * @param name Name to be recorded
+	 * @param number Phone number to be recorded
+	 */
 	public void addEntry(String name, String number) throws IOException{
 		Properties contact = new Properties();
 		OutputStream output = new FileOutputStream("src/main/resources/phone.properties", true); 
@@ -27,6 +30,11 @@ public class PhoneDirectory {
 		output.close();
 		
 	}
+	
+	/**
+	 * @param name Name to be recorded
+	 * @param number Phone number to be changed
+	 */
 	
     public void changeEntry(String name, String number) throws IOException{
 		
@@ -41,7 +49,9 @@ public class PhoneDirectory {
 		
 		
 	}
-
+    /**
+	 * @param name Name of the contact whose number is to be deleted
+	 */
     public void deleteEntry(String name) throws IOException{
 	
 	    Properties contact = new Properties();
@@ -54,7 +64,10 @@ public class PhoneDirectory {
 	    output.close();
 	
     }
-    
+    /**
+	 * @param name Name of the contact whose number is to be returned
+	 * @return num Phone number of the contact
+	 */
     public String getNumber(String name) throws IOException{
 		
 		Properties contact = new Properties();
